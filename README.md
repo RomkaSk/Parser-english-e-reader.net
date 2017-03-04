@@ -45,7 +45,7 @@ Txt: http://english-e-reader.net/download?link=board-games-butler-james&format=t
 
 ### Example
 ```python3
->>> ebparse.links = get_all_the_book_links(
+>>> links = ebparse.get_all_the_book_links(
         genre='detective',
         level='elementary',
         audio='true',
@@ -54,7 +54,7 @@ Txt: http://english-e-reader.net/download?link=board-games-butler-james&format=t
 >>> books = ebparse.get_books(liks)
 >>> books[0]['title']
 "Board Games"
->>> ebparse.books_save(books, file_name='Books')
+>>> ebparse.save(books, file_name='Books')
 ------------
 Books: 8
 ------------
