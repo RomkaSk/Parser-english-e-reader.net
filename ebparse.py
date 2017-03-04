@@ -63,8 +63,8 @@ def get_books(books_links):
     return books
 
 
-def books_save(books, name='Books'):
-    f = open(name, 'w')
+def save(books, file_name='Books.txt'):
+    f = open(file_name, 'w')
 
     for book in books:
         f.write(
@@ -90,11 +90,11 @@ def books_save(books, name='Books'):
 
 
 if __name__ == '__main__':
-    links = get_all_the_book_links(
+    links = get_all_books_links(
         genre='detective',
         level='elementary',
         audio='true',
         length='short')
-    books = get_books(liks)
-    books_save(books)
+    books = get_books(links)
+    save(books)
     print('-' * 12 + '\n' + 'Books: ' + str(len(books)) + '\n' + '-' * 12)
